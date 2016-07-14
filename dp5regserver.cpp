@@ -317,7 +317,7 @@ unsigned int DP5RegServer::epoch_change(ostream &metadataos, ostream &dataos)
 
     // Try NUM_PRF_ITERS random PRF keys and see which one results in
     // the smallest largest bucket.
-    PRFKey best_prfkey;
+    PRFKey best_prfkey = {};
     unsigned int best_size = regdata.size()+1;
     for (unsigned int iter=0; iter<NUM_PRF_ITERS; ++iter) {
         unsigned long count[md.num_buckets];
