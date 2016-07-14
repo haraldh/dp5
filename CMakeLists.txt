@@ -5,8 +5,8 @@ project (DP5)
 set (DP5_VERSION_MAJOR 0)
 set (DP5_VERSION_MINOR 01)
 
-set (CMAKE_CXX_FLAGS "-g -O0 -Wall  -Werror -Wno-deprecated-declarations -Wno-non-template-friend -Wno-unknown-warning-option -fPIC")
-set (CMAKE_C_FLAGS "-g -O0 -Wall -Werror -Wno-deprecated-declarations -fPIC")
+set (CMAKE_CXX_FLAGS "-g -Os -Wall  -Werror -Wno-deprecated-declarations -Wno-non-template-friend -Wno-strict-aliasing -fPIC -std=c++11 -std=gnu++98 ")
+set (CMAKE_C_FLAGS "-g -Os -Wall -Werror -Wno-deprecated-declarations -fPIC")
 
 find_library(GMP gmp)
 if(GMP)
